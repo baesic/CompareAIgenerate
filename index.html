@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CompareAIgenerate | AI 글 생성·평가 시각 비교</title>
+  <meta
+    name="description"
+    content="Gemini 3.1 Pro, ChatGPT 5.5, Opus 4.6의 블로그 글 생성 결과와 평가 품질을 시각적으로 비교한 GitHub Pages 리포트"
+  >
+  <meta name="author" content="baesic">
+  <meta property="og:title" content="CompareAIgenerate">
+  <meta property="og:description" content="AI 모델별 블로그 글 생성 결과와 평가 품질을 비교하는 공개 분석 리포트">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://baesic.com/2026/05/15/우리는-지금-gpu를-태우는-f1-레이스에-서-있다/">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top">CompareAIgenerate</a>
+    <nav class="nav-links" aria-label="페이지 섹션">
+      <a href="#source">원안</a>
+      <a href="#fulltexts">전문</a>
+      <a href="#method">방법론</a>
+      <a href="#drafts">생성안</a>
+      <a href="#rawtables">원문 평가표</a>
+      <a href="#scores">평가</a>
+      <a href="#usage">활용</a>
+      <a href="https://baesic.com/2026/05/15/우리는-지금-gpu를-태우는-f1-레이스에-서-있다/" target="_blank" rel="noreferrer">게시글</a>
+    </nav>
+  </header>
+
+  <main id="top" class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">AI Writing Generation & Evaluation</p>
+        <h1>원안, 생성안, 평가 품질을 한 화면에서 비교한다</h1>
+        <p class="hero-text">
+          baesic의 원안을 세 모델이 블로그 글로 재구성하고, 다시 세 모델이 산출물을 평가한 결과를
+          시각화했습니다. 웹페이지 안에서 원안 전문, 모델별 생성 전문, 모델별 평가표와 공통 분석을
+          바로 읽히도록 구성했습니다.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://baesic.com/2026/05/15/우리는-지금-gpu를-태우는-f1-레이스에-서-있다/" target="_blank" rel="noreferrer">게시글 보기</a>
+          <a class="button secondary" href="#fulltexts">전문 비교 보기</a>
+          <a class="button ghost" href="#rawtables">원문 평가표 보기</a>
+        </div>
+      </div>
+
+      <div class="hero-board" aria-label="프로젝트 핵심 흐름">
+        <div class="flow-node origin">
+          <span>Source</span>
+          <strong>baesic 원안</strong>
+          <p>386DX 기억과 AI 과금 경쟁의 연결</p>
+        </div>
+        <div class="flow-split">
+          <div>A안<br><b>Gemini</b></div>
+          <div>B안<br><b>ChatGPT</b></div>
+          <div>C안<br><b>Opus</b></div>
+        </div>
+        <div class="flow-node result">
+          <span>Outcome</span>
+          <strong>B안 + C안 장치</strong>
+          <p>게시 안정성과 칼럼형 여운을 결합</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="decision-grid" aria-label="핵심 결론">
+      <article class="decision-card">
+        <span>Best Draft</span>
+        <strong>B안</strong>
+        <p>ChatGPT 5.5와 Opus 4.6 평가에서 모두 1순위로 선택되었습니다.</p>
+      </article>
+      <article class="decision-card">
+        <span>Best Evaluator</span>
+        <strong>Opus 4.6</strong>
+        <p>원문 뉘앙스와 편집 과정에서 생기는 손실을 가장 정밀하게 설명했습니다.</p>
+      </article>
+      <article class="decision-card">
+        <span>Practical Guide</span>
+        <strong>ChatGPT 5.5</strong>
+        <p>최종 게시본 선정과 수정 방향 제시가 가장 직접적입니다.</p>
+      </article>
+      <article class="decision-card">
+        <span>License</span>
+        <strong>MIT</strong>
+        <p>제작자 baesic 표기로 공개 저장소 배포에 맞췄습니다.</p>
+      </article>
+    </section>
+
+    <section id="source" class="section source-lab">
+      <div class="section-head">
+        <div>
+          <p class="section-label">Original Document</p>
+          <h2>원안을 시각적으로 분해한 핵심 신호</h2>
+        </div>
+        <p class="section-note">
+          원문 전체를 그대로 읽기 전에, 어떤 문제의식이 A/B/C안으로 변환되었는지 먼저 파악할 수 있게
+          핵심 신호를 추출했습니다.
+        </p>
+      </div>
+      <div class="source-layout">
+        <article class="origin-quote">
+          <span class="card-label">원안의 중심 문장</span>
+          <p>
+            “지금은 왠지 억지로 GPU 태우고 빠른 속도 높은 성능으로 경쟁하는 F1 레이스 같은 느낌이다.”
+          </p>
+          <a href="#fulltexts">원안 전문으로 이동</a>
+        </article>
+        <div class="signal-map">
+          <div class="signal-item">
+            <span>01</span>
+            <div>
+              <strong>386DX와 티코 가격</strong>
+              <p>비싸고 제한적인 초기 기술이 결국 대중화되는 역사적 비유입니다.</p>
+            </div>
+          </div>
+          <div class="signal-item">
+            <span>02</span>
+            <div>
+              <strong>AI 구독료와 과금 경쟁</strong>
+              <p>현재 고성능 AI 접근성이 아직 과도기적 비용 구조에 묶여 있다는 관찰입니다.</p>
+            </div>
+          </div>
+          <div class="signal-item">
+            <span>03</span>
+            <div>
+              <strong>온디바이스 생태계</strong>
+              <p>클라우드 호출 중심에서 개인 기기 내 실행 환경으로 이동할 가능성을 봅니다.</p>
+            </div>
+          </div>
+          <div class="signal-item">
+            <span>04</span>
+            <div>
+              <strong>GPU 경쟁에서 알고리즘으로</strong>
+              <p>연산 자원 경쟁 이후에는 효율과 구조 설계가 다시 핵심이 된다는 결론입니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fulltexts" class="section fulltext-section">
+      <div class="section-head">
+        <div>
+          <p class="section-label">Full Text Comparison</p>
+          <h2>원안과 모델별 생성 전문</h2>
+        </div>
+        <p class="section-note">
+          원안은 스크롤 없는 전체 텍스트 박스로 표시하고, A/B/C 생성안은 긴 글을 비교하기 쉽도록
+          스크롤 가능한 전문 박스로 제공합니다.
+        </p>
+      </div>
+      <div id="fulltext-source" class="fulltext-source"></div>
+      <div id="generated-fulltexts" class="generated-fulltexts"></div>
+    </section>
+
+    <section id="method" class="section method-section">
+      <div class="section-head">
+        <div>
+          <p class="section-label">Evaluation Method</p>
+          <h2>Markdown 방법론을 웹 시각화로 변환</h2>
+        </div>
+        <p class="section-note">
+          실험 설계는 원안, 생성, 교차 평가, 정규화, 활용 판단의 순서로 읽히도록 재배치했습니다.
+        </p>
+      </div>
+      <div class="method-flow" aria-label="평가 절차">
+        <div class="method-step">
+          <span>1</span>
+          <strong>원안</strong>
+          <p>문제의식과 화자성을 보존</p>
+        </div>
+        <div class="method-step">
+          <span>2</span>
+          <strong>생성</strong>
+          <p>A/B/C 블로그 후보 산출</p>
+        </div>
+        <div class="method-step">
+          <span>3</span>
+          <strong>평가</strong>
+          <p>3개 모델이 동일 대상 평가</p>
+        </div>
+        <div class="method-step">
+          <span>4</span>
+          <strong>정규화</strong>
+          <p>서로 다른 배점을 10점화</p>
+        </div>
+        <div class="method-step">
+          <span>5</span>
+          <strong>활용</strong>
+          <p>게시, 편집, 리포트 목적별 판단</p>
+        </div>
+      </div>
+      <div id="rubric-grid" class="rubric-grid"></div>
+    </section>
+
+    <section id="drafts" class="section">
+      <div class="section-head">
+        <div>
+          <p class="section-label">Generated Drafts</p>
+          <h2>모델별 생성 결과의 차이</h2>
+        </div>
+        <p class="section-note">
+          같은 원안이 요약형, 균형형, 칼럼형으로 갈라지는 지점을 카드 단위로 비교합니다.
+        </p>
+      </div>
+      <div id="draft-grid" class="draft-grid"></div>
+    </section>
+
+    <section id="rawtables" class="section rawtable-section">
+      <div class="section-head">
+        <div>
+          <p class="section-label">Original Evaluation Tables</p>
+          <h2>모델별 원문 평가표 전체 보기</h2>
+        </div>
+        <p class="section-note">
+          각 평가 모델이 만든 비교표를 웹페이지용 표로 재구성했습니다. 이 아래에 공통 결론 기반의
+          비교 분석과 정규화 시각화를 이어서 배치했습니다.
+        </p>
+      </div>
+      <div id="evaluation-tables" class="evaluation-tables"></div>
+      <div class="common-analysis">
+        <div class="common-head">
+          <p class="section-label">Common Pattern Analysis</p>
+          <h2>세 평가표에서 반복되는 공통 결론</h2>
+        </div>
+        <div id="common-grid" class="common-grid"></div>
+      </div>
+    </section>
+
+    <section id="scores" class="section score-section">
+      <div class="section-head">
+        <div>
+          <p class="section-label">Cross Evaluation</p>
+          <h2>평가 모델별 점수와 1순위 판단</h2>
+        </div>
+        <p class="section-note">
+          넓은 원본 표를 모델별 판독 카드로 바꿨습니다. 각 카드의 점수 블록은 같은 10점 기준입니다.
+        </p>
+      </div>
+      <div id="verdict-cards" class="verdict-cards"></div>
+      <div id="consensus-bars" class="consensus-grid"></div>
+    </section>
+
+    <section class="section quality-section">
+      <div class="section-head">
+        <div>
+          <p class="section-label">Evaluator Quality</p>
+          <h2>평가 모델 자체의 품질 비교</h2>
+        </div>
+        <p class="section-note">
+          평가표가 얼마나 명확하고, 균형 있으며, 실제 의사결정에 쓸 수 있는지를 다시 평가했습니다.
+        </p>
+      </div>
+      <div id="scoreboard" class="scoreboard"></div>
+    </section>
+
+    <section id="usage" class="section usage-section">
+      <div class="section-head">
+        <div>
+          <p class="section-label">Applied Use</p>
+          <h2>목적별 활용 판단</h2>
+        </div>
+        <p class="section-note">
+          “어떤 모델이 더 좋은가”보다 중요한 것은 어떤 업무에 어떤 결과를 쓰는가입니다.
+        </p>
+      </div>
+      <div id="usecase-grid" class="usecase-grid"></div>
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>비교 항목</th>
+              <th>Gemini 3.1 Pro</th>
+              <th>ChatGPT 5.5</th>
+              <th>Opus 4.6</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>빠른 요약</td>
+              <td><b>매우 강함</b><span>표와 항목 정리가 빠름</span></td>
+              <td><b>강함</b><span>요약과 판단이 균형적</span></td>
+              <td><b>보통</b><span>설명 밀도가 높음</span></td>
+            </tr>
+            <tr>
+              <td>게시본 선정</td>
+              <td><b>보통</b><span>완성도 중심 평가</span></td>
+              <td><b>매우 강함</b><span>실제 편집 판단에 유리</span></td>
+              <td><b>강함</b><span>문체 관찰이 세밀함</span></td>
+            </tr>
+            <tr>
+              <td>정밀 분석</td>
+              <td><b>강함</b><span>구조 파악에 유리</span></td>
+              <td><b>강함</b><span>실무 균형이 좋음</span></td>
+              <td><b>매우 강함</b><span>뉘앙스 손실을 잘 짚음</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section conclusion-section">
+      <div>
+        <p class="section-label">Conclusion</p>
+        <h2>결론: B안을 게시 기준으로, Opus 4.6을 분석 기준으로</h2>
+      </div>
+      <p>
+        실제 게시용 글은 B안이 가장 안정적입니다. 다만 제목과 결말의 인상은 C안이 강하므로,
+        B안 본문에 C안의 질문형 소제목과 마지막 여운을 일부 결합하는 편집 전략이 가장 활용 가치가 높습니다.
+        평가 모델의 전문성은 Opus 4.6이 가장 높고, 빠른 편집 의사결정에는 ChatGPT 5.5가 가장 유리합니다.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Created by baesic. MIT License.</p>
+    <div class="footer-links">
+      <a href="https://baesic.com/2026/05/15/우리는-지금-gpu를-태우는-f1-레이스에-서-있다/" target="_blank" rel="noreferrer">게시글</a>
+      <a href="LICENSE">License</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
