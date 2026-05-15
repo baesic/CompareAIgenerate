@@ -4,6 +4,11 @@
 
 이 저장소의 목적은 단순한 글감 비교가 아니라, **AI가 글을 생성하는 방식과 AI가 다시 그 결과물을 평가하는 방식의 차이**를 공개적으로 분석하는 것입니다. GitHub Pages에서 바로 확인 가능한 정적 웹페이지도 함께 제공합니다.
 
+## 바로 보기
+
+- GitHub Pages: [https://baesic.github.io/CompareAIgenerate](https://baesic.github.io/CompareAIgenerate)
+- 관련 게시글: [우리는 지금 GPU를 태우는 F1 레이스에 서 있다](https://baesic.com/2026/05/15/우리는-지금-gpu를-태우는-f1-레이스에-서-있다/)
+
 ## 핵심 질문
 
 - 같은 원안을 각 모델은 어떤 블로그 문체와 구조로 재구성하는가?
@@ -88,7 +93,7 @@ GitHub Pages용 [index.html](./index.html)은 Markdown 원문 링크에 의존�
 1. GitHub 저장소의 `Settings > Pages`로 이동합니다.
 2. 배포 소스를 `Deploy from a branch`로 설정합니다.
 3. 브랜치를 `main`, 폴더를 `/root`로 선택합니다.
-4. 저장 후 배포 주소에서 `index.html` 기반 리포트를 확인합니다.
+4. 저장 후 [https://baesic.github.io/CompareAIgenerate](https://baesic.github.io/CompareAIgenerate)에서 리포트를 확인합니다.
 
 ## 저장소 구성
 
@@ -105,6 +110,7 @@ GitHub Pages용 [index.html](./index.html)은 Markdown 원문 링크에 의존�
 ## 링크
 
 - 제작자: `baesic`
+- GitHub Pages: [https://baesic.github.io/CompareAIgenerate](https://baesic.github.io/CompareAIgenerate)
 - 관련 글 및 결과물: [우리는 지금 GPU를 태우는 F1 레이스에 서 있다](https://baesic.com/2026/05/15/우리는-지금-gpu를-태우는-f1-레이스에-서-있다/)
 
 ## 라이선스
